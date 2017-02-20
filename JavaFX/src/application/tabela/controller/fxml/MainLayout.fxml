@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="505.0" prefWidth="600.0" styleClass="body" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.MainLayoutController">
+   <children>
+      <AnchorPane layoutY="469.0" prefHeight="36.0" prefWidth="607.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" layoutX="462.0" layoutY="11.0" prefHeight="14.0" prefWidth="108.0" text="TCE-CE © 2015" AnchorPane.bottomAnchor="11.0" AnchorPane.rightAnchor="30.0" />
+            <Label alignment="CENTER" layoutX="33.0" layoutY="11.0" prefHeight="14.0" prefWidth="143.0" text="Secretaria de TI" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="33.0" />
+            <Separator layoutX="28.0" layoutY="1.0" prefHeight="1.0" prefWidth="545.0" AnchorPane.bottomAnchor="32.0" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="27.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="107.0" prefWidth="607.0" styleClass="header" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <ImageView fx:id="ivLogo" fitHeight="66.0" fitWidth="296.0" layoutX="28.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </AnchorPane>
+      <StackPane fx:id="paneMain" prefHeight="324.0" prefWidth="540.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="131.0">
+         <children>
+            <TableView fx:id="tbArquivos" prefHeight="261.0" prefWidth="540.0" StackPane.alignment="TOP_CENTER">
+              <columns>
+                <TableColumn fx:id="tbcArquivo" editable="false" maxWidth="10000.0" minWidth="200.0" prefWidth="-1.0" resizable="false" text="Arquivo" />
+                <TableColumn fx:id="tbcCaminho" editable="false" maxWidth="50000.0" minWidth="250.0" prefWidth="-1.0" resizable="false" text="Caminho" />
+              </columns>
+               <StackPane.margin>
+                  <Insets bottom="110.0" top="10.0" />
+               </StackPane.margin>
+            </TableView>
+            <Button fx:id="btnAssinar" alignment="CENTER" maxHeight="36.0" maxWidth="143.0" mnemonicParsing="false" onAction="#handleAssinar" prefHeight="36.0" prefWidth="143.0" styleClass="button-assinar" text="Assinar" StackPane.alignment="BOTTOM_CENTER">
+               <StackPane.margin>
+                  <Insets bottom="15.0" top="15.0" />
+               </StackPane.margin>
+            </Button>
+            <Button fx:id="btnAdicionar" mnemonicParsing="false" onAction="#handleAdicionar" prefHeight="22.0" prefWidth="35.0" text="+" StackPane.alignment="BOTTOM_RIGHT">
+               <StackPane.margin>
+                  <Insets bottom="70.0" right="50.0" top="10.0" />
+               </StackPane.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnRemover" mnemonicParsing="false" onAction="#handleRemover" prefHeight="22.0" prefWidth="35.0" text="-" StackPane.alignment="BOTTOM_RIGHT">
+               <StackPane.margin>
+                  <Insets bottom="70.0" top="10.0" />
+               </StackPane.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Button>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

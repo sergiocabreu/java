@@ -1,0 +1,59 @@
+.body {
+    -fx-background-color: #FFFFFF;
+}
+
+.btn-sign {
+    -fx-background-color: #002D49;
+}
+
+.header {
+    -fx-background-color: #303641;
+}
+
+.button-assinar {
+    -fx-text-fill: #FFFFFF;
+    -fx-font: 17px Tahoma;
+    -fx-background-color: #303641;
+}
+
+#textlog {
+	-fx-background-color: #EEEEEE;
+    -fx-font: 11px Tahoma;
+    -fx-fill: #555555;
+    -fx-text-alignment: left;
+}
+
+.scroll-pane{
+	-fx-background-color: #EEEEEE;
+    -fx-padding: 3.5;
+    -fx-effect: dropshadow(
+    		two-pass-box,		/* <blur-type> = [ gaussian | one-pass-box | three-pass-box | two-pass-box ] */
+    		rgba(0,0,0,0.3),	/* <color> */
+    		4,					/* <number> The radius of the shadow blur kernel. In the range [0.0 ... 127.0], typical value 10. */
+    		0.0,				/* <number> The spread of the shadow. [0.0 ... 1.0] */
+    		0,					/* <number> The shadow offset in the x direction, in pixels. */
+    		0 					/* <number> The shadow offset in the y direction, in pixels. */
+    );
+    
+}
+
+.text-area:disabled {
+    -fx-opacity: 0.9;
+    -fx-background-color: #000000;
+    -fx-text-fill: #303641;
+    -fx-background-insets: 0, 1, 2;
+    -fx-background-radius: 3, 2, 2;
+}
+
+.text-area .scroll-pane:disabled{
+    -fx-opacity: 0.9;
+	-fx-background-color: #dddddd;
+	-fx-background-insets: 0, 1, 2;
+    -fx-background-radius: 3, 2, 2;
+}
+
+.text-area .content {
+    -fx-padding: 3 5 3 5; 
+    -fx-cursor: text;
+}
+

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="509.0" prefWidth="440.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.ConfDialogController">
+   <children>
+      <Button fx:id="btSalvarConf" layoutX="240.0" layoutY="468.0" mnemonicParsing="false" onAction="#handleSalvarConf" prefHeight="22.0" prefWidth="84.0" text="Salvar" />
+      <Button fx:id="btCancelarConf" layoutX="341.0" layoutY="468.0" mnemonicParsing="false" onAction="#handleCancelarConf" prefHeight="22.0" prefWidth="84.0" text="Cancelar" />
+      <TextField fx:id="tfLcr" layoutX="13.0" layoutY="48.0" prefHeight="22.0" prefWidth="303.0" />
+      <Label layoutX="13.0" layoutY="21.0" prefHeight="14.0" prefWidth="128.0" text="Repositório LCR" />
+      <Button fx:id="btBuscarLcr" layoutX="332.0" layoutY="48.0" mnemonicParsing="false" onAction="#handleBuscarLcr" prefHeight="22.0" prefWidth="95.0" text="Buscar" />
+      <Button fx:id="btBuscarCadeia" layoutX="332.0" layoutY="118.0" mnemonicParsing="false" onAction="#handleBuscarcadeia" prefHeight="22.0" prefWidth="95.0" text="Buscar" />
+      <Label layoutX="13.0" layoutY="91.0" prefHeight="14.0" prefWidth="128.0" text="Repositório Cadeia" />
+      <TextField fx:id="tfCadeia" layoutX="13.0" layoutY="118.0" prefHeight="22.0" prefWidth="303.0" />
+      <CheckBox fx:id="chkBaixarCadeia" layoutX="252.0" layoutY="471.0" mnemonicParsing="false" text="Baixar Cadeias" visible="false" />
+      <CheckBox fx:id="chkBaixarLcr" layoutX="102.0" layoutY="471.0" mnemonicParsing="false" text="Baixar LCRs" visible="false" />
+      <TextField fx:id="tfCarimbadora" layoutX="13.0" layoutY="189.0" prefHeight="22.0" prefWidth="414.0" />
+      <Label layoutX="13.0" layoutY="162.0" prefHeight="14.0" prefWidth="136.0" text="Endereço da Carimbadora" />
+      <TitledPane animated="false" collapsible="false" layoutX="14.0" layoutY="236.0" prefHeight="191.0" prefWidth="414.0" text="Intevarlo de Download">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <VBox id="fieldSet" fx:id="vPanelIntervalos" prefHeight="168.0" prefWidth="414.0">
+                     <children>
+                        <AnchorPane fx:id="panelIntervalo1" prefHeight="67.0" prefWidth="414.0">
+                           <children>
+                              <TextField fx:id="tfValUsuario" layoutX="93.0" layoutY="16.0" prefHeight="22.0" prefWidth="48.0" />
+                              <Label layoutX="12.0" layoutY="20.0" text="Usuário:" />
+                              <Group>
+      							<children>
+	                              <RadioButton fx:id="rbSegUsuario" layoutX="152.0" layoutY="20.0" mnemonicParsing="false" text="Seg." />
+	                              <RadioButton fx:id="rbMinUsuario" layoutX="215.0" layoutY="20.0" mnemonicParsing="false" text="Min." />
+	                              <RadioButton fx:id="rbHoraUsuario" layoutX="273.0" layoutY="20.0" mnemonicParsing="false" text="Hora" />
+	                              <RadioButton fx:id="rbDiaUsuario" layoutX="337.0" layoutY="20.0" mnemonicParsing="false" text="Dia" />
+                              	</children>
+    						  </Group>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="panelIntervalo" prefHeight="67.0" prefWidth="414.0">
+                           <children>
+                              <TextField fx:id="tfValAc" layoutX="93.0" layoutY="16.0" prefHeight="22.0" prefWidth="48.0" />
+                              <Label layoutX="12.0" layoutY="20.0" text="AC:" />
+                              <Group>
+      							<children>
+	                              <RadioButton fx:id="rbSegAc" layoutX="152.0" layoutY="20.0" mnemonicParsing="false" text="Seg." />
+	                              <RadioButton fx:id="rbMinAc" layoutX="215.0" layoutY="20.0" mnemonicParsing="false" text="Min." />
+	                              <RadioButton fx:id="rbHoraAc" layoutX="273.0" layoutY="20.0" mnemonicParsing="false" text="Hora" />
+	                              <RadioButton fx:id="rbDiaAc" layoutX="337.0" layoutY="20.0" mnemonicParsing="false" text="Dia" />
+                              	</children>
+    						  </Group>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="panelIntervalo2" prefHeight="67.0" prefWidth="414.0">
+                           <children>
+                              <TextField fx:id="tfValCarimbadora" layoutX="93.0" layoutY="16.0" prefHeight="22.0" prefWidth="48.0" />
+                              <Label layoutX="12.0" layoutY="20.0" text="Carimbadora:" />
+                              <Group>
+      							<children>
+	                              <RadioButton fx:id="rbSegCarimbadora" layoutX="152.0" layoutY="20.0" mnemonicParsing="false" text="Seg." />
+	                              <RadioButton fx:id="rbMinCarimbadora" layoutX="215.0" layoutY="20.0" mnemonicParsing="false" text="Min." />
+	                              <RadioButton fx:id="rbHoraCarimbadora" layoutX="273.0" layoutY="20.0" mnemonicParsing="false" text="Hora" />
+	                              <RadioButton fx:id="rbDiaCarimbadora" layoutX="337.0" layoutY="20.0" mnemonicParsing="false" text="Dia" />
+                              	</children>
+    						  </Group>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+</AnchorPane>
