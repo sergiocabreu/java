@@ -1,0 +1,5 @@
+CREATE TABLE restaurants(
+id INTEGER, 
+restName VARCHAR(24),
+cityName VARCHAR(1024)
+);
